@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 8, 2017 3:12:33 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.websystique.springmvc.model.Equipos" table="equipos" catalog="mantenimiento" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tipo" type="string">
+            <column name="tipo" length="100" />
+        </property>
+        <property name="marca" type="string">
+            <column name="marca" length="100" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="modelo" length="100" />
+        </property>
+        <property name="ano" type="string">
+            <column name="ano" length="100" />
+        </property>
+        <property name="serie" type="string">
+            <column name="serie" length="100" not-null="true" />
+        </property>
+        <property name="ficha" type="string">
+            <column name="ficha" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

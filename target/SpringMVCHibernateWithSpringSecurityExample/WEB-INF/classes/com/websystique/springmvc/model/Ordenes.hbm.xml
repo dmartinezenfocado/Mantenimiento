@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 8, 2017 3:12:33 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.websystique.springmvc.model.Ordenes" table="ordenes" catalog="mantenimiento" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaCreacion" type="string">
+            <column name="fecha_creacion" length="100" />
+        </property>
+        <property name="fechaCierre" type="string">
+            <column name="fecha_cierre" length="100" />
+        </property>
+        <property name="tipoOrden" type="string">
+            <column name="tipo_orden" length="100" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="100" />
+        </property>
+        <property name="equipoFk" type="java.lang.Integer">
+            <column name="equipo_fk" />
+        </property>
+        <property name="estatus" type="string">
+            <column name="estatus" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
